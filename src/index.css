@@ -1,0 +1,14 @@
+.slider img,
+.card-image {
+  height: 650px;
+  object-fit: cover;
+}
+
+/* .mimg {
+  width: 250px;
+  height: 250px;
+} */
+
+.pointer {
+  cursor: pointer;
+}
