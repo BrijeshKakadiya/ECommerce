@@ -32,15 +32,13 @@ const Product = ({ match }) => {
     getProduct(slug).then((res) => {
       setProduct(res.data);
       // load Related
-      getRelated(res.data._id).then((res) => {
-        setRelated(res.data);
-      });
+      getRelated(res.data._id).then((res) => setRelated(res.data));
     });
   };
 
   const onStarClick = (newRating, name) => {
     setStar(newRating);
-    console.table(newRating, name);
+    // console.table(newRating, name);
     productStar(name, newRating, user.token).then((res) => {
       console.log("rating clicked", res.data);
       loadSingleProduct(); // if you want to show update rating in real time

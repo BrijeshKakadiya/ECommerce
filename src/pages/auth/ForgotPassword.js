@@ -37,6 +37,12 @@ const ForgotPassword = ({ history }) => {
       });
   };
 
+  function onButtonClick() {
+    this.setState({ loading: true, email: "TEST" });
+    // API CALL
+    //
+  }
+
   return (
     <div className="container col-md-6 offeset-md-3 p-5">
       {loading ? (
@@ -54,7 +60,11 @@ const ForgotPassword = ({ history }) => {
           autoFocus
         />
         <br />
-        <button className="btn btn-raised" disabled={!email}>
+        <button
+          className="btn btn-raised"
+          onClick={(e) => this.onButtonClick()}
+          disabled={!email}
+        >
           Submit
         </button>
       </form>

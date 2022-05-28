@@ -86,19 +86,19 @@ const ProductCardInCheckOut = ({ p }) => {
     }
   };
 
+  const imgStyle = {
+    style: { width: "100px", height: "250px" },
+  };
+
   return (
     <tbody>
       <tr>
         <td>
-          <div>
+          <div className={imgStyle}>
             {p.images.length ? (
               <ModalImage small={p.images[0].url} large={p.images[0].url} />
             ) : (
-              <ModalImage
-                small={laptop}
-                large={laptop}
-                style={{ width: "250px", height: "250px" }}
-              />
+              <ModalImage small={laptop} large={laptop} />
             )}
           </div>
         </td>

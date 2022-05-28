@@ -14,7 +14,7 @@ import { createOrUpdateUser } from "../../functions/auth";
 
 const Login = ({ history }) => {
   const [email, setEmail] = useState("brijeshkakadiya4@gmail.com");
-  const [password, setPassword] = useState("12345678");
+  const [password, setPassword] = useState("123456789");
   const [loading, setLoading] = useState(false);
 
   let dispatch = useDispatch();
